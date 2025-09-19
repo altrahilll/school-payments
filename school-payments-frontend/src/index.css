@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root { height: 100%; }
+  body { @apply bg-gray-50 text-gray-800 antialiased font-sans; }
+
+  /* Force full-surface dark look */
+  html.dark body { @apply bg-neutral-900 text-neutral-200; }
+}
+
+@layer components {
+  .btn { @apply inline-flex items-center justify-center rounded-md bg-brand-600 px-4 py-2 text-white hover:bg-brand-700 transition; }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-md bg-gray-100 px-3 py-2 text-gray-900 hover:bg-gray-200 transition;
+    @apply dark:bg-neutral-800 dark:text-neutral-100 dark:hover:bg-neutral-700;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center rounded-md px-3 py-2 text-gray-700 hover:bg-gray-100;
+    @apply dark:text-neutral-200 dark:hover:bg-neutral-800/80;
+  }
+
+  .input {
+    @apply w-full rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 bg-white;
+    @apply dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-100 dark:placeholder-neutral-400;
+  }
+
+  .card {
+    @apply rounded-xl bg-white p-5 shadow-card ring-1 ring-gray-200;
+    @apply dark:bg-neutral-800 dark:ring-neutral-700;
+  }
+
+  .table { @apply w-full border-separate border-spacing-0; }
+
+  .th {
+    @apply bg-gray-50 text-left text-xs sm:text-sm font-semibold p-3 border-b border-gray-200 sticky top-0;
+    @apply dark:bg-neutral-800 dark:border-neutral-700;
+  }
+
+  .td {
+    @apply p-3 text-sm border-b border-gray-100;
+    @apply dark:border-neutral-800;
+  }
+
+  .chip { @apply inline-flex items-center gap-1 rounded-full px-2 py-1 text-xs; }
+  .chip-green { @apply chip bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300; }
+  .chip-red   { @apply chip bg-red-100   text-red-700   dark:bg-red-900/30   dark:text-red-300; }
+  .chip-yellow{ @apply chip bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300; }
+}
