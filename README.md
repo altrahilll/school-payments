@@ -166,8 +166,4 @@ school-payments-frontend/
 
 ## 📸 Screenshots
 
-Place screenshots in `docs/screenshots/`.
-
-Example usage:
-```
-![Login Page](docs/screensdocs/screenshots/dashboardy the above content to a new `README.md` in VS Code.
+Place screenshots in `docs/screenshots/`
